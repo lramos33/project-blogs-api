@@ -23,7 +23,7 @@ module.exports = {
         references: {
           model: 'Users',
           key: 'id',
-        }
+        },
       },
       published: {
         type: Sequelize.DATE,
@@ -37,5 +37,5 @@ module.exports = {
   },
   down: async (queryInterface, _Sequelize) => {
     await queryInterface.dropTable('BlogPosts');
-  }
+  },
 };

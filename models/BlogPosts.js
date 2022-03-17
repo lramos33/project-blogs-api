@@ -30,14 +30,14 @@ const blogPostsAttributes = {
   },
 };
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, _DataTypes) => {
   const BlogPosts = sequelize.define('BlogPosts', blogPostsAttributes, {
-    timeStamps: false,
+    timestamps: false,
     tableName: 'BlogPosts',
   });
 
   BlogPosts.associate = (models) => {
-    BlogPosts.belongsTo(models.User, { foreignKey: 'UserId', as: "User" })
+    BlogPosts.belongsTo(models.Users, { foreignKey: 'userId', as: 'user' });
   };
 
   return BlogPosts;

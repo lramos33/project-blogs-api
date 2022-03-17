@@ -28,13 +28,13 @@ const usersAttributes = {
 
 module.exports = (sequelize, _DataTypes) => {
   const Users = sequelize.define('Users', usersAttributes, { 
-    timeStamps: false,
+    timestamps: false,
     tableName: 'Users',
   });
 
   Users.associate = (models) => {
-    Users.hasMany(models.BlogPosts, { foreignKey: 'UserId', as: "BlogPosts" });
-  }
+    Users.hasMany(models.BlogPosts, { foreignKey: 'userId', as: 'blogPosts' });
+  };
 
   return Users;
 };
