@@ -36,7 +36,7 @@ const validatePassword = (password) => {
 const userValidation = async (displayName, email, password) => {
   const displayNameError = validateDisplayName(displayName);
   const passwordError = validatePassword(password);
-  const emailError = validateEmail(email);
+  const emailError = await validateEmail(email);
 
   if (displayNameError) return displayNameError;
   if (passwordError) return passwordError;
