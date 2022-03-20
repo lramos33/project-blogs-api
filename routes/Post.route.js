@@ -11,4 +11,10 @@ postRouter.post(
   controller.create,
 );
 
+postRouter.get(
+  '/',
+  middleware.validateJWT,
+  controller.getAll,
+);
+
 module.exports = postRouter;
