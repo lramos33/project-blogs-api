@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, Sequelize } = require('sequelize');
 
 const blogPostsAttributes = {
   id: {
@@ -23,10 +23,12 @@ const blogPostsAttributes = {
   published: {
     type: DataTypes.DATE,
     allowNull: false,
+    defaultValue: Sequelize.fn('now'),
   },
   updated: {
     type: DataTypes.DATE,
     allowNull: false,
+    defaultValue: Sequelize.fn('now'),
   },
 };
 

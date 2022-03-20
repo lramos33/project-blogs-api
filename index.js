@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use('/Categories', routes.Categories);
 app.use('/Login', routes.Login);
-// app.use('/Post', routes.Post);
+app.use('/Post', routes.Post);
 app.use('/user', routes.User);
 app.use(middleware.error);
 
