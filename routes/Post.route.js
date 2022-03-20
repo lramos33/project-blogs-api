@@ -17,4 +17,10 @@ postRouter.get(
   controller.getAll,
 );
 
+postRouter.get(
+  '/:id',
+  middleware.validateJWT,
+  controller.getById,
+);
+
 module.exports = postRouter;
