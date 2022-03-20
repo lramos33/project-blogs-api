@@ -4,7 +4,7 @@ const middleware = require('../middlewares');
 
 const userRouter = express.Router();
 
-userRouter.get('/', controller.getAll);
+userRouter.get('/', middleware.validateJWT, controller.getAll);
 userRouter.post('/', middleware.userValidation, controller.create);
 
 module.exports = userRouter;

@@ -6,7 +6,7 @@ const validateJWT = async (req, res, next) => {
   const token = req.headers.authorization;
 
   if (!token) {
-    return res.status(401).json({ error: 'Token not found' });
+    return res.status(401).json({ message: 'Token not found' });
   }
 
   try {
@@ -14,7 +14,7 @@ const validateJWT = async (req, res, next) => {
     req.user = decoded;
     next();
   } catch (error) {
-    next(error);
+    return res.status(401).json({ message: 'Expired or invalid token' });
   }
 };
 
