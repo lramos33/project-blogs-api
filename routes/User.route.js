@@ -7,7 +7,7 @@ const userRouter = express.Router();
 userRouter.get(
   '/',
   middleware.validateJWT,
-  controller.getAll
+  controller.getAll,
 );
 
 userRouter.get(
