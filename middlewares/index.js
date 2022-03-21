@@ -4,6 +4,7 @@ const validateJWT = require('./validateJWT.middleware');
 const loginValidation = require('./loginValidation.middleware');
 const categoriesValidation = require('./categoriesValidation.middleware');
 const postValidation = require('./postValidation.middleware');
+const editPostValidation = require('./editPostValidation.middleware');
 
 module.exports = {
   userValidation,
@@ -12,4 +13,5 @@ module.exports = {
   loginValidation,
   categoriesValidation,
   postValidation,
+  editPostValidation,
 };
