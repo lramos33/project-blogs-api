@@ -30,4 +30,11 @@ postRouter.put(
   controller.edit,
 );
 
+postRouter.delete(
+  '/:id',
+  middleware.validateJWT,
+  middleware.removePostValidation,
+  controller.remove,
+);
+
 module.exports = postRouter;

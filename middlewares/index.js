@@ -5,6 +5,7 @@ const loginValidation = require('./loginValidation.middleware');
 const categoriesValidation = require('./categoriesValidation.middleware');
 const postValidation = require('./postValidation.middleware');
 const editPostValidation = require('./editPostValidation.middleware');
+const removePostValidation = require('./removePostValidation.middleware');
 
 module.exports = {
   userValidation,
@@ -14,4 +15,5 @@ module.exports = {
   categoriesValidation,
   postValidation,
   editPostValidation,
+  removePostValidation,
 };
