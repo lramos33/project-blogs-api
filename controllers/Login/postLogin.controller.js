@@ -1,4 +1,4 @@
-const JWT = require('../../services/JWT/JWT.services');
+const JWT = require('../../services/JWT/JWT.service');
 
 const postLogin = async (req, res, next) => {
   try {

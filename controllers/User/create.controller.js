@@ -1,5 +1,5 @@
 const services = require('../../services/User');
-const JWT = require('../../services/JWT/JWT.services');
+const JWT = require('../../services/JWT/JWT.service');
 
 const create = async (req, res, next) => {
   try {
