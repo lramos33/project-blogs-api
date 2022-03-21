@@ -22,4 +22,10 @@ userRouter.post(
   controller.create,
 );
 
+userRouter.delete(
+  '/me',
+  middleware.validateJWT,
+  controller.remove,
+);
+
 module.exports = userRouter;
