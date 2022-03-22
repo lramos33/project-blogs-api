@@ -3,6 +3,7 @@ const getAll = require('./getAll.service');
 const getById = require('./getById.service');
 const edit = require('./edit.service');
 const remove = require('./remove.service');
+const search = require('./search.service');
 
 module.exports = {
   create,
@@ -10,4 +11,5 @@ module.exports = {
   getById,
   edit,
   remove,
+  search,
 };

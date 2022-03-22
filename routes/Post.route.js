@@ -18,6 +18,12 @@ postRouter.get(
 );
 
 postRouter.get(
+  '/search',
+  middleware.validateJWT,
+  controller.search,
+);
+
+postRouter.get(
   '/:id',
   middleware.validateJWT,
   controller.getById,
